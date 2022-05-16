@@ -1,0 +1,46 @@
+{
+  "continents": [
+    {
+      "name": "asia",
+      "coordinates": {
+        "x": 600,
+        "y": 150
+      }
+    },
+    {
+      "name": "africa",
+      "coordinates": {
+        "x": 450,
+        "y": 250
+      }
+    },
+    {
+      "name": "north america",
+      "coordinates": {
+        "x": 135,
+        "y": 150
+      }
+    },
+    {
+      "name": "south america",
+      "coordinates": {
+        "x": 220,
+        "y": 350
+      }
+    },
+    {
+      "name": "australia",
+      "coordinates": {
+        "x": 800,
+        "y": 400
+      }
+    },
+    {
+      "name": "europe",
+      "coordinates": {
+        "x": 450,
+        "y": 150
+      }
+    }
+  ]
+}
