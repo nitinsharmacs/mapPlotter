@@ -37,17 +37,24 @@ const absoluteLocation = ({ x: xCoor, y: yCoor }) => {
 
 const plotter = ({ coordinates }) => {
 
-  const pointer = createDiv({
-    content: '',
-    classes: ['pointer'],
-    attrs: [
-      { attr: 'style', value: absoluteLocation(coordinates) }
-    ]
-  });
-  return createDiv({
-    content: pointer,
-    classes: ['plotter']
-  });
+  const pointer = [
+    'div',
+    {
+      class: 'pointer',
+      style: {
+        left: coordinates.x + 'px',
+        top: coordinates.y + 'px'
+      }
+    },
+    []
+  ];
+  return html([
+    'div',
+    {
+      class: 'plotter'
+    },
+    [pointer]
+  ]);
 };
 
 const mapContainer = (continent) => {
