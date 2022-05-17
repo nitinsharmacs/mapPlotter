@@ -5,6 +5,8 @@ const {
   createImage
 } = require('./html.js');
 
+const { html } = require('./htmlCreater/parser.js');
+
 const continent = (continents, continentName) => {
   return continents.find(element => {
     return element.name.match(continentName.toLowerCase());
@@ -12,15 +14,21 @@ const continent = (continents, continentName) => {
 };
 
 const map = () => {
-  const worldMap = createImage({
-    src: './image/worldMap.png',
-    alt: 'world map',
-    classes: []
-  });
-  return createDiv({
-    content: worldMap,
-    classes: ['map']
-  });
+  const worldMap = [
+    'img',
+    {
+      src: './image/worldMap.png',
+      alt: 'world map'
+    }
+  ];
+  const mapBox = [
+    'div',
+    {
+      class: 'map'
+    },
+    [worldMap]
+  ];
+  return html(mapBox);
 };
 
 const absoluteLocation = ({ x: xCoor, y: yCoor }) => {
